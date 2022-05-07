@@ -28,6 +28,7 @@ jobs:
         uses: pypa/cibuildwheel@v2.5.0
         env:
           CIBW_ENVIRONMENT: USE_MYPYC=1
+          CIBW_PROJECT_REQUIRES_PYTHON: ">=3.5"
 
       - uses: actions/upload-artifact@v3
         with:
