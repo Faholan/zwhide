@@ -1,3 +1,6 @@
 [build-system]
 requires = ["setuptools", "wheel", "mypy"]
 build-backend = "setuptools.build_meta"
+
+[tool.cibuildwheel]
+skip = "pp*"
