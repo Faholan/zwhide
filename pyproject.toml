@@ -3,4 +3,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.cibuildwheel]
+before-all = "python3 -m pip install mypy"
+
+[tool.cibuildwheel.windows]
 before-all = "python -m pip install mypy"
