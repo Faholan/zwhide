@@ -23,7 +23,7 @@ with open("README.md", encoding="utf-8") as file:
     readme = file.read()
 
 
-use_mypyc = os.getenv("MYPY_USE_MYPYC", None) == "1"
+use_mypyc = os.getenv("USE_MYPYC", None) == "1"
 
 if len(sys.argv) > 1 and sys.argv[1] == "--use-mypyc":
     sys.argv.pop(1)
