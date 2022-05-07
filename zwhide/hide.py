@@ -1,9 +1,9 @@
 """Hide messages in Zero-width characters."""
 
-import typing as t
+from typing import Final
 
 
-CHARACTERS: t.Final = (
+CHARACTERS: Final = (
     "\u200b",  # zero-width space
     "\u200c",  # zero-width non-joiner
     "\u200d",  # zero-width joiner
@@ -15,7 +15,7 @@ CHARACTERS: t.Final = (
 )
 
 
-ENCODING: t.Final = tuple(
+ENCODING: Final = tuple(
     CHARACTERS[i1] + CHARACTERS[i2] + CHARACTERS[i3]
     for i1 in range(8)
     for i2 in range(8)
